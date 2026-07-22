@@ -7,8 +7,8 @@
 **Asignatura:** Compiladores y Lenguajes de Programación  
 **Evaluación:** Segundo Bimestre  
 **Fecha:** 22 de julio de 2025  
-**Estudiante:** [Tu nombre]  
-**Grupo:** [Tu grupo]
+**Estudiantes:**   
+**Grupo:** 
 
 ---
 
