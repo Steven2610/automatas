@@ -131,10 +131,10 @@ const tokenize = (text) => {
 ```
 Tokens reconocidos:
 
-RAIZ: Palabra clave para raíz cuadrada
-(, ): Paréntesis
-+, -, *, /: Operadores aritméticos
-dig: Cualquier dígito 0-9
+- **RAIZ:** Palabra clave para raíz cuadrada
+- **(, ):** Paréntesis
+- **+, -, *, /:** Operadores aritméticos
+- **dig:** Cualquier dígito 0-9
 $: Fin de entrada (EOF)
 ### 3.4 Implementación del Parser
 El parser utiliza una pila explícita que almacena pares (símbolo, nodo_del_árbol):
