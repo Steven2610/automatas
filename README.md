@@ -181,7 +181,6 @@ nodoActual.children = newNodes;  // Conectar al árbol
 El árbol se visualiza recursivamente con líneas de conexión estilo árbol de directorios.
 ```
 ### 3.6 Manejo de Errores
-## Manejo de Errores
 
 El sistema detecta dos tipos de errores:
 
