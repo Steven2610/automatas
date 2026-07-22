@@ -139,7 +139,7 @@ $: Fin de entrada (EOF)
 ### 3.4 Implementación del Parser
 El parser utiliza una pila explícita que almacena pares (símbolo, nodo_del_árbol):
 
-## Algoritmo
+#### Algoritmo
 
 1. Inicializar pila con **[$ , S]**
 2. Crear nodo raíz **S** en el árbol
@@ -181,17 +181,28 @@ nodoActual.children = newNodes;  // Conectar al árbol
 El árbol se visualiza recursivamente con líneas de conexión estilo árbol de directorios.
 ```
 ### 3.6 Manejo de Errores
+## Manejo de Errores
+
 El sistema detecta dos tipos de errores:
 
-Error léxico: Caracteres no reconocidos (ej: @, #, letras)
-Error sintáctico: Secuencia inválida de tokens
-No existe entrada en tabla M[A,a]
-Terminal en pila no coincide con token actual
-Fin de entrada inesperado
-Mensajes de error incluyen:
+#### Error léxico
 
-Símbolo no terminal y terminal involucrados
-Posición en la entrada (cuando aplica)
+- Caracteres no reconocidos (ej: @, #, letras)
+
+#### Error sintáctico
+
+- Secuencia inválida de tokens
+- No existe entrada en tabla **M[A,a]**
+- Terminal en pila no coincide con token actual
+- Fin de entrada inesperado
+
+---
+
+#### Mensajes de error incluyen:
+
+- Símbolo no terminal y terminal involucrados
+- Posición en la entrada (cuando aplica)
+
 ## 4. PRUEBAS Y RESULTADOS
 ### 4.1 Casos de Prueba Válidos
 - **Prueba 1:** Expresión con paréntesis y operaciones mixtas
