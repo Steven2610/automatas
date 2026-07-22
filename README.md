@@ -133,7 +133,7 @@ Tokens reconocidos:
 
 - **RAIZ:** Palabra clave para raíz cuadrada
 - **(, ):** Paréntesis
-- **+, -, *, /:** Operadores aritméticos
+- **+,** **-,** **x, /:** Operadores aritméticos
 - **dig:** Cualquier dígito 0-9
 $: Fin de entrada (EOF)
 ### 3.4 Implementación del Parser
@@ -185,44 +185,44 @@ Símbolo no terminal y terminal involucrados
 Posición en la entrada (cuando aplica)
 ## 4. PRUEBAS Y RESULTADOS
 ### 4.1 Casos de Prueba Válidos
-Prueba 1: Expresión con paréntesis y operaciones mixtas
-Entrada: ( 3 + 5 ) * 2
+- **Prueba 1:** Expresión con paréntesis y operaciones mixtas
+- **Entrada:** ( 3 + 5 ) * 2
 
-Resultado esperado: Aceptada
-Árbol generado: Expresión con precedencia correcta (paréntesis primero, luego multiplicación)
-
-[Insertar captura de pantalla]
-
-Prueba 2: Raíz cuadrada
-Entrada: RAIZ 9 + 5
-
-Resultado esperado: Aceptada
-Árbol generado: U → RAIZ F, luego E' → + T E'
+- **Resultado esperado:** Aceptada
+- **Árbol generado:** Expresión con precedencia correcta (paréntesis primero, luego multiplicación)
 
 [Insertar captura de pantalla]
 
-Prueba 3: Asociatividad izquierda
-Entrada: 3 + 5 + 2
+- **Prueba 2:** Raíz cuadrada
+- **Entrada:** RAIZ 9 + 5
 
-Resultado esperado: Aceptada
-Árbol generado: (3 + 5) + 2 (asociatividad izquierda demostrada)
+- **Resultado esperado:** Aceptada
+- **Árbol generado:** U → RAIZ F, luego E' → + T E'
+
+[Insertar captura de pantalla]
+
+- **Prueba 3:** Asociatividad izquierda
+- **Entrada:** 3 + 5 + 2
+
+- **Resultado esperado:** Aceptada
+- **Árbol generado:** (3 + 5) + 2 (asociatividad izquierda demostrada)
 
 [Insertar captura de pantalla]
 
 ### 4.2 Casos de Prueba con Error
-Prueba 4: Sintaxis inválida (operador donde no corresponde)
-Entrada: 3 + * 2
+- **Prueba 4:** Sintaxis inválida (operador donde no corresponde)
+- **Entrada:** 3 + * 2
 
-Error detectado: Error sintáctico: No hay producción M[T, *]
-Explicación: Después de un +, el parser espera un Término (T), pero encuentra * que no inicia ningún término válido.
+- **Error detectado:** Error sintáctico: No hay producción M[T, *]
+- **Explicación:** Después de un +, el parser espera un Término (T), pero encuentra * que no inicia ningún término válido.
 
 [Insertar captura de pantalla]
 
-Prueba 5: Paréntesis no balanceado
+- **Prueba 5:** Paréntesis no balanceado
 Entrada: ( 3 + 5
 
-Error detectado: Error sintáctico: No hay producción M[E', $]
-Explicación: Se llega al final de la entrada ($) esperando un ) que nunca aparece.
+- **Error detectado:** Error sintáctico: No hay producción M[E', $]
+- **Explicación:** Se llega al final de la entrada ($) esperando un ) que nunca aparece.
 
 [Insertar captura de pantalla]
 
