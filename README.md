@@ -78,7 +78,7 @@ La tabla se construye usando:
 ## 3. DESARROLLO DEL PROTOTIPO
 
 ### 3.1 Arquitectura del Sistema
-
+```
 +-----------------+     +------------------     +-----------------+
 |   INTERFAZ UI   |---->|   PARSER LL(1)    |---->|    ÁRBOL AST    |
 |    (React)      |     |  (Lógica Pila)    |     |    (Visual)     |
@@ -95,7 +95,7 @@ La tabla se construye usando:
 |     LEXER/      |                                      
 |    TOKENIZER    |                                      
 +-----------------+
-
+```
 ### 3.2 Gramática Implementada
 
 **No terminales:** N = {S, E, E', T, T', U, F, num, num', dig}
