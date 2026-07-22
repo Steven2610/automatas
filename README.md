@@ -79,23 +79,22 @@ La tabla se construye usando:
 
 ### 3.1 Arquitectura del Sistema
 
-El prototipo está desarrollado en JavaScript con React (vía CDN) y consta de tres módulos principales:
-┌─────────────────┐ ┌──────────────────┐ ┌─────────────────┐
-│ INTERFAZ UI │────▶│ PARSER LL(1) │────▶│ ÁRBOL AST │
-│ (React) │ │ (Lógica Pila) │ │ (Visual) │
-└─────────────────┘ └──────────────────┘ └─────────────────┘
-│ │
-▼ ▼
-┌─────────────────┐ ┌──────────────────┐
-│ ENTRADA │ │ TABLA M[A,a] │
-│ (Texto) │ │ (Diccionario) │
-└─────────────────┘ └──────────────────┘
-│
-▼
-┌─────────────────┐
-│ LEXER/ │
-│ TOKENIZER │
-└─────────────────┘
++-----------------+     +------------------     +-----------------+
+|   INTERFAZ UI   |---->|   PARSER LL(1)    |---->|    ÁRBOL AST    |
+|    (React)      |     |  (Lógica Pila)    |     |    (Visual)     |
++-----------------+     +------------------     +-----------------+
+         |                       |                       
+         v                       v                       
++-----------------+     +------------------              
+|     ENTRADA     |     |   TABLA M[A,a]   |              
+|     (Texto)     |     |  (Diccionario)   |              
++-----------------+     +------------------              
+         |                                               
+         v                                               
++-----------------+                                      
+|     LEXER/      |                                      
+|    TOKENIZER    |                                      
++-----------------+
 
 ### 3.2 Gramática Implementada
 
