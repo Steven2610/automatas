@@ -128,6 +128,7 @@ const tokenize = (text) => {
     // Retorna array de objetos {type, value}
     // Añade $ al final (EOF)
 };
+```
 Tokens reconocidos:
 
 RAIZ: Palabra clave para raíz cuadrada
@@ -169,7 +170,7 @@ const newNodes = prod.map(s => ({ name: s, children: [] }));
 nodoActual.children = newNodes;  // Conectar al árbol
 // Apilar en orden inverso: Z, Y, X
 El árbol se visualiza recursivamente con líneas de conexión estilo árbol de directorios.
-
+```
 ###3.6 Manejo de Errores
 El sistema detecta dos tipos de errores:
 
