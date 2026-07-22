@@ -258,6 +258,22 @@ Integración con AL real: Reemplazar el lexer simplificado por el analizador lé
 [El código HTML/JS completo va aquí o como archivo adjunto]
 
 ### Anexo B: Tabla LL(1) Completa
+
+| No Terminal | RAIZ | ( | ) | + | - | * | / | dig | $ |
+|-------------|------|---|---|---|---|---|---|---------|---|
+| S | E | E | - | - | - | - | - | E | - |
+| E | TE' | TE' | - | - | - | - | - | TE' | - |
+| E' | - | - | λ | +TE' | -TE' | - | - | - | λ |
+| T | UT' | UT' | - | - | - | - | - | UT' | - |
+| T' | - | - | λ | λ | λ | *UT' | /UT' | - | λ |
+| U | RAIZ F | F | - | - | - | - | - | F | - |
+| F | - | (E) | - | - | - | - | - | num | - |
+| num | - | - | - | - | - | - | - | dig num' | - |
+| num' | - | - | λ | λ | λ | λ | λ | dig num' | λ |
+| dig | - | - | - | - | - | - | - | VAL | - |
+
+> **Notación:** **-** indica celda vacía (error), **λ** es la cadena vacía.
+
 ´´´
 No Terminal	RAIZ	(	)	+	-	*	/	dig	$
 S	E	E	-	-	-	-	-	E	-
