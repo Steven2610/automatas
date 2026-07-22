@@ -233,25 +233,25 @@ ID	Entrada	Tipo	Resultado	Observación
 3	3 + 5 + 2	Válida	✅ Aceptada	Asociatividad
 4	3 + * 2	Error	❌ Rechazada	Token inesperado
 5	( 3 + 5	Error	❌ Rechazada	Paréntesis abierto
-5. CONCLUSIONES
-Transformación de gramática: Se logró transformar exitosamente la gramática original con recursividad izquierda a una forma LL(1) mediante la introducción de no-terminales auxiliares (E', T', num'), permitiendo el uso de un parser predictivo no recursivo.
+## 5. CONCLUSIONES
+- **Transformación de gramática:** Se logró transformar exitosamente la gramática original con recursividad izquierda a una forma LL(1) mediante la introducción de no-terminales auxiliares (E', T', num'), permitiendo el uso de un parser predictivo no recursivo.
 
-Eficiencia del parser LL(1): El algoritmo de análisis sintáctico descendente con tabla de análisis M[A,a] demostró ser eficiente y fácil de implementar, requiriendo solo O(n) tiempo para analizar una cadena de n tokens.
+- **Eficiencia del parser LL(1):** El algoritmo de análisis sintáctico descendente con tabla de análisis M[A,a] demostró ser eficiente y fácil de implementar, requiriendo solo O(n) tiempo para analizar una cadena de n tokens.
 
-Visualización didáctica: La interfaz gráfica que muestra la traza paso a paso (Pila, Token, Acción) y el árbol de derivación resultó ser una herramienta efectiva para comprender el funcionamiento interno del parser.
+- **Visualización didáctica:** La interfaz gráfica que muestra la traza paso a paso (Pila, Token, Acción) y el árbol de derivación resultó ser una herramienta efectiva para comprender el funcionamiento interno del parser.
 
-Manejo de errores: El sistema detecta y reporta errores sintácticos con precisión, indicando qué símbolo se esperaba y qué se encontró, facilitando la depuración.
+- **Manejo de errores:** El sistema detecta y reporta errores sintácticos con precisión, indicando qué símbolo se esperaba y qué se encontró, facilitando la depuración.
 
-Preparación para integración: El diseño modular separa claramente el lexer, el parser y el generador del árbol, facilitando la futura integración con un analizador léxico real desarrollado en semestres anteriores.
+- **Preparación para integración:** El diseño modular separa claramente el lexer, el parser y el generador del árbol, facilitando la futura integración con un analizador léxico real desarrollado en semestres anteriores.
 
 ### 6. RECOMENDACIONES
-Extensión de operadores: Incluir operadores adicionales como potencia (^) y módulo (%), requiriendo ajustes en la gramática y la tabla de análisis.
+- **Extensión de operadores:** Incluir operadores adicionales como potencia (^) y módulo (%), requiriendo ajustes en la gramática y la tabla de análisis.
 
-Análisis semántico: Agregar una fase posterior que evalúe la expresión numéricamente o genere código intermedio.
+- **Análisis semántico:** Agregar una fase posterior que evalúe la expresión numéricamente o genere código intermedio.
 
-Recuperación de errores: Implementar estrategias de recuperación (modo pánico, frases de sincronización) para continuar el análisis después de un error.
+- **Recuperación de errores:** Implementar estrategias de recuperación (modo pánico, frases de sincronización) para continuar el análisis después de un error.
 
-Integración con AL real: Reemplazar el lexer simplificado por el analizador léxico completo desarrollado en las semanas 5-7, manteniendo la interfaz de tokens.
+- **Integración con AL real:** Reemplazar el lexer simplificado por el analizador léxico completo desarrollado en las semanas 5-7, manteniendo la interfaz de tokens.
 
 ## ANEXOS
 ### Anexo A: Código Fuente Completo
