@@ -136,7 +136,7 @@ RAIZ: Palabra clave para raíz cuadrada
 +, -, *, /: Operadores aritméticos
 dig: Cualquier dígito 0-9
 $: Fin de entrada (EOF)
-3.4 Implementación del Parser
+### 3.4 Implementación del Parser
 El parser utiliza una pila explícita que almacena pares (símbolo, nodo_del_árbol):
 
 Algoritmo:
@@ -161,7 +161,7 @@ Paso	Pila	Token	Acción
 2	$ E	(	M[E,(] = E→TE'
 3	$ E' T	(	M[T,(] = T→UT'
 ...	...	...	...
-###3.5 Construcción del Árbol de Derivación
+### 3.5 Construcción del Árbol de Derivación
 Cada vez que se expande un no-terminal, se crean nodos hijos en el árbol:
 
 ```javascript
@@ -171,7 +171,7 @@ nodoActual.children = newNodes;  // Conectar al árbol
 // Apilar en orden inverso: Z, Y, X
 El árbol se visualiza recursivamente con líneas de conexión estilo árbol de directorios.
 ```
-###3.6 Manejo de Errores
+### 3.6 Manejo de Errores
 El sistema detecta dos tipos de errores:
 
 Error léxico: Caracteres no reconocidos (ej: @, #, letras)
@@ -183,8 +183,8 @@ Mensajes de error incluyen:
 
 Símbolo no terminal y terminal involucrados
 Posición en la entrada (cuando aplica)
-##4. PRUEBAS Y RESULTADOS
-###4.1 Casos de Prueba Válidos
+## 4. PRUEBAS Y RESULTADOS
+### 4.1 Casos de Prueba Válidos
 Prueba 1: Expresión con paréntesis y operaciones mixtas
 Entrada: ( 3 + 5 ) * 2
 
@@ -209,7 +209,7 @@ Resultado esperado: Aceptada
 
 [Insertar captura de pantalla]
 
-###4.2 Casos de Prueba con Error
+### 4.2 Casos de Prueba con Error
 Prueba 4: Sintaxis inválida (operador donde no corresponde)
 Entrada: 3 + * 2
 
@@ -244,7 +244,7 @@ Manejo de errores: El sistema detecta y reporta errores sintácticos con precisi
 
 Preparación para integración: El diseño modular separa claramente el lexer, el parser y el generador del árbol, facilitando la futura integración con un analizador léxico real desarrollado en semestres anteriores.
 
-###6. RECOMENDACIONES
+### 6. RECOMENDACIONES
 Extensión de operadores: Incluir operadores adicionales como potencia (^) y módulo (%), requiriendo ajustes en la gramática y la tabla de análisis.
 
 Análisis semántico: Agregar una fase posterior que evalúe la expresión numéricamente o genere código intermedio.
