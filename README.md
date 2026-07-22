@@ -226,13 +226,16 @@ Explicación: Se llega al final de la entrada ($) esperando un ) que nunca apare
 
 [Insertar captura de pantalla]
 
-###4.3 Tabla de Resumen de Pruebas
-ID	Entrada	Tipo	Resultado	Observación
-1	( 3 + 5 ) * 2	Válida	✅ Aceptada	Precedencia correcta
-2	RAIZ 9 + 5	Válida	✅ Aceptada	Operador unario
-3	3 + 5 + 2	Válida	✅ Aceptada	Asociatividad
-4	3 + * 2	Error	❌ Rechazada	Token inesperado
-5	( 3 + 5	Error	❌ Rechazada	Paréntesis abierto
+### 4.3 Tabla de Resumen de Pruebas
+
+| ID | Entrada | Tipo | Resultado | Observación |
+|:--:|----------|------|-----------|-------------|
+| 1 | ( 3 + 5 ) * 2 | Válida | ✅ Aceptada | Precedencia correcta |
+| 2 | RAIZ 9 + 5 | Válida | ✅ Aceptada | Operador unario |
+| 3 | 3 + 5 + 2 | Válida | ✅ Aceptada | Asociatividad |
+| 4 | 3 + * 2 | Error | ❌ Rechazada | Token inesperado |
+| 5 | ( 3 + 5 | Error | ❌ Rechazada | Paréntesis abierto |
+
 ## 5. CONCLUSIONES
 - **Transformación de gramática:** Se logró transformar exitosamente la gramática original con recursividad izquierda a una forma LL(1) mediante la introducción de no-terminales auxiliares (E', T', num'), permitiendo el uso de un parser predictivo no recursivo.
 
