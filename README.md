@@ -163,7 +163,7 @@ Paso	Pila	Token	Acción
 ###3.5 Construcción del Árbol de Derivación
 Cada vez que se expande un no-terminal, se crean nodos hijos en el árbol:
 
-javascript
+```javascript
 // Al expandir A → X Y Z:
 const newNodes = prod.map(s => ({ name: s, children: [] }));
 nodoActual.children = newNodes;  // Conectar al árbol
