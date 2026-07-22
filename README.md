@@ -133,34 +133,43 @@ Tokens reconocidos:
 
 - **RAIZ:** Palabra clave para raíz cuadrada
 - **(, ):** Paréntesis
-- **+,** **-,** **x, /:** Operadores aritméticos
+- **+, -,\*, /:** Operadores aritméticos
 - **dig:** Cualquier dígito 0-9
 $: Fin de entrada (EOF)
 ### 3.4 Implementación del Parser
 El parser utiliza una pila explícita que almacena pares (símbolo, nodo_del_árbol):
 
-Algoritmo:
+## Algoritmo
 
-1. Inicializar pila con [$ , S]
-2. Crear nodo raíz S en el árbol
+1. Inicializar pila con **[$ , S]**
+2. Crear nodo raíz **S** en el árbol
 3. Mientras pila no vacía:
-   a. Sacar tope (X)
-   b. Si X es terminal:
-      - Debe coincidir con token actual
-      - Si coincide: consumir token, avanzar
-      - Si no: ERROR
-   c. Si X es no-terminal:
-      - Buscar M[X, token] en tabla
-      - Si existe producción: expandir (sacar X, meter producción inversa)
-      - Si no existe: ERROR
-   d. Si X = $ y token = $: ACEPTAR
-Ejemplo de traza:
 
-Paso	Pila	Token	Acción
-1	$ S	(	M[S,(] = S→E
-2	$ E	(	M[E,(] = E→TE'
-3	$ E' T	(	M[T,(] = T→UT'
-...	...	...	...
+   **a. Sacar tope (X)**
+
+   **b. Si X es terminal:**
+   - Debe coincidir con token actual
+   - Si coincide: consumir token, avanzar
+   - Si no: ERROR
+
+   **c. Si X es no-terminal:**
+   - Buscar **M[X, token]** en tabla
+   - Si existe producción: expandir (sacar X, meter producción inversa)
+   - Si no existe: ERROR
+
+   **d. Si X = $ y token = $:**  
+   - ACEPTAR
+
+---
+
+## Ejemplo de traza
+
+| Paso | Pila | Token | Acción |
+|:---:|------|-------|--------|
+| 1 | $ S | ( | M[S,(] = S→E |
+| 2 | $ E | ( | M[E,(] = E→TE' |
+| 3 | $ E' T | ( | M[T,(] = T→UT' |
+| ... | ... | ... | ... |
 ### 3.5 Construcción del Árbol de Derivación
 Cada vez que se expande un no-terminal, se crean nodos hijos en el árbol:
 
