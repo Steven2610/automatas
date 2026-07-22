@@ -253,11 +253,12 @@ Recuperación de errores: Implementar estrategias de recuperación (modo pánico
 
 Integración con AL real: Reemplazar el lexer simplificado por el analizador léxico completo desarrollado en las semanas 5-7, manteniendo la interfaz de tokens.
 
-ANEXOS
-Anexo A: Código Fuente Completo
+## ANEXOS
+### Anexo A: Código Fuente Completo
 [El código HTML/JS completo va aquí o como archivo adjunto]
 
-Anexo B: Tabla LL(1) Completa
+### Anexo B: Tabla LL(1) Completa
+´´´
 No Terminal	RAIZ	(	)	+	-	*	/	dig	$
 S	E	E	-	-	-	-	-	E	-
 E	TE'	TE'	-	-	-	-	-	TE'	-
@@ -270,8 +271,8 @@ num	-	-	-	-	-	-	-	dig num'	-
 num'	-	-	λ	λ	λ	λ	λ	dig num'	λ
 dig	-	-	-	-	-	-	-	VAL	-
 Notación: - indica celda vacía (error), λ es la cadena vacía
-
-Anexo C: Glosario
+´´´
+### Anexo C: Glosario
 AST: Abstract Syntax Tree (Árbol de Sintaxis Abstracta)
 GIC: Gramática Independiente del Contexto
 LL(1): Left-to-right, Leftmost derivation, 1 symbol lookahead
